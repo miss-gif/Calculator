@@ -1,0 +1,123 @@
+@charset "utf-8";
+$basicFontSize: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: $basicFontSize;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.mainCal {
+  width: 35rem;
+  height: 40rem;
+  background: {
+    color: lightgray;
+  }
+  border: {
+    radius: 1rem;
+  }
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(35rem * -0.5, 40rem * -0.5);
+  box: {
+    shadow: 0.3rem 0.3rem 0.5rem darkgray;
+  }
+
+  .printLCD {
+    width: 24rem;
+    height: 5rem;
+    outline: 0;
+    background: {
+      color: white;
+    }
+    font: {
+      family: "Orbitron", sans-serif;
+      size: 3rem;
+    }
+    line-height: 5rem;
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    text: {
+      align: right;
+    }
+    border: {
+      radius: 1rem;
+      width: 0;
+    }
+    padding: {
+      right: 1rem;
+    }
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .printLCD::placeholder {
+    color: black;
+  }
+
+  .keyPad {
+    width: 25rem;
+    height: 20rem;
+    position: absolute;
+    top: 15rem;
+    left: 5rem;
+
+    [class^="b"] {
+      width: 4rem;
+      height: 4rem;
+      float: left;
+      margin: 0.5rem;
+      cursor: pointer;
+      font: {
+        size: 2rem;
+        family: "Orbitron", sans-serif;
+      }
+      line-height: 4rem;
+      text: {
+        align: center;
+      }
+      border: {
+        radius: 50%;
+      }
+      background: {
+        color: white;
+      }
+    }
+
+    [class^="b"]:hover {
+      box: {
+        shadow: inset 0.2rem 0.2rem 0.5rem darkgray;
+      }
+    }
+
+    .bB {
+      visibility: hidden;
+    }
+
+    .iconControl {
+      font: {
+        weight: 100;
+        size: 2rem;
+      }
+      line-height: 5rem - 2rem;
+    }
+
+    .funcBtn {
+      background: {
+        color: orange;
+      }
+    }
+
+    .funcBtn:hover {
+      box: {
+        shadow: inset 0.2rem 0.2rem 0.5rem coral;
+      }
+    }
+  }
+}
